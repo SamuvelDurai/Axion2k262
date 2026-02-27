@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 import SectionTitle from './SectionTitle';
 
 const scheduleData = [
-  { time: "09:00 AM", event: "Keynote: The AI-oT Landscape", location: "Main Auditorium" },
-  { time: "11:00 AM", event: "Track Sessions: Morning Block", location: "Halls A, B & C" },
-  { time: "01:30 PM", event: "Lunch & Networking Mixer", location: "Tech Lounge" },
-  { time: "02:30 PM", event: "Hands-on Workshop: Edge AI", location: "Innovation Lab" },
-  { time: "05:00 PM", event: "Closing Ceremony & Awards", location: "Main Auditorium" },
+  { time: "09:00 AM", event: "Keynote: The AI-oT Landscape", location: "APJ ABDULKALAM AUDITORIUM" },
+  { time: "11:00 AM", event: "Track Sessions: Morning Block", location: "CSE LAB 3" },
+  { time: "01:30 PM", event: "Lunch & Networking Mixer", location: "CSE LAB 3 " },
+  { time: "02:30 PM", event: "Hands-on Workshop: Edge AI", location: "CSE LAB 3" },
+  { time: "05:00 PM", event: "Closing Ceremony & Awards", location: "APJ ABDULKALAM AUDITORIUM" },
 ];
 
 const ScheduleSection: React.FC = () => {

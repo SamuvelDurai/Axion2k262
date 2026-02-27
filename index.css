@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0b0e14] text-white overflow-x-hidden;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-[rgba(11,14,20,0.75)] backdrop-blur-[16px] border border-[rgba(255,255,255,0.08)];
+  }
+}
+
+@layer utilities {
+  .text-glow-cyan {
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5), 0 0 20px rgba(0, 242, 255, 0.2);
+  }
+  .text-glow-purple {
+    text-shadow: 0 0 10px rgba(188, 19, 254, 0.5), 0 0 20px rgba(188, 19, 254, 0.2);
+  }
+  .axion-brand {
+    @apply relative font-logo font-black uppercase;
+    background: linear-gradient(to right, #00f2ff, #bc13fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 10px rgba(0, 242, 255, 0.5));
+  }
+  .axion-container {
+    @apply flex items-center gap-2 border-l-[3px] border-[#00f2ff] pl-3 relative;
+  }
+  .axion-container::after {
+    content: '';
+    @apply absolute -bottom-[5px] left-0 w-[40%] h-[2px] bg-[#bc13fe];
+  }
+  .fusion-title {
+    @apply font-logo uppercase tracking-[-0.02em] relative;
+  }
+  .fusion-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #fff 30%, rgba(255,255,255,0.5) 100%);
+  }
+  .animate-marquee {
+    @apply flex w-max;
+    animation: marquee 30s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-[#0b0e14];
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-[#1f2937] rounded-[10px];
+}

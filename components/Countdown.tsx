@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -33,7 +32,6 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
       };
     };
 
-    // Initial check
     const initialTime = calculateTimeLeft();
     if (initialTime) setTimeLeft(initialTime);
 

@@ -11,7 +11,6 @@ import {
   ExternalLink, 
   Twitter, 
   Linkedin, 
-  Github, 
   ChevronRight,
   Menu,
   X,
@@ -19,19 +18,25 @@ import {
   MessageSquare,
   Bot,
   Layers,
-  ArrowRight
+  ArrowRight,
+  MessageCircle,
+  Facebook,
+  Instagram
 } from 'lucide-react';
 import NeuralBackground from './components/NeuralBackground';
 import Countdown from './components/Countdown';
 import SectionTitle from './components/SectionTitle';
 import ScheduleSection from './components/ScheduleSection';
 import CoordinatorsSection from './components/CoordinatorsSection';
+import SupportHub from './components/SupportHub';
 
 const App: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const FORM_LINK = "https://forms.gle/3LYU8FG75LNRmmJg7";
+  const WHATSAPP_NUMBER = "8940312281";
+  const WHATSAPP_LINK = `https://wa.me/91${WHATSAPP_NUMBER}?text=Hi, I'm interested in AXION 2K26 Workshop!`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -96,11 +101,29 @@ const App: React.FC = () => {
   ];
 
   const sponsors = [
-    "VIDYAA VIKAS", "Nexus Systems", "CyberCore", "Innova Labs", "DataStream", "Quantum Dev", "Aether Robotics", "LogicGate"
+    "VIDYAA VIKAS", "Rexora", "vazhi Aakkam", "reign mars", "DataStream", "Quantum Dev", "Aether Robotics", "LogicGate"
   ];
 
   return (
     <div className="min-h-screen relative selection:bg-[#00f2ff] selection:text-[#0b0e14]">
+      {/* Floating WhatsApp Button */}
+      <motion.a
+        href={WHATSAPP_LINK}
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="fixed bottom-8 right-8 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:shadow-[0_0_30px_rgba(37,211,102,0.6)] transition-all"
+      >
+        <MessageCircle size={32} className="text-white" />
+        <span className="absolute -top-2 -right-2 flex h-4 w-4">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-4 w-4 bg-white"></span>
+        </span>
+      </motion.a>
+
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'glass py-3' : 'py-6 bg-transparent'}`}>
         <div className="container mx-auto px-6 flex justify-between items-center">
@@ -390,6 +413,8 @@ const App: React.FC = () => {
         </div>
       </section>
 
+      <SupportHub whatsappLink={WHATSAPP_LINK} />
+
       {/* Footer */}
       <footer id="contact" className="pt-24 pb-12 bg-[#0b0e14] border-t border-white/5">
         <div className="container mx-auto px-6">
@@ -402,14 +427,14 @@ const App: React.FC = () => {
                 Vidyaa Vikas College of Engineering and Technology - Intelligence of Things Workshop.
               </p>
               <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 glass flex items-center justify-center hover:text-[#00f2ff] transition-all">
-                  <Twitter size={18} />
+                <a href="https://www.facebook.com/profile.php?id=100063773751715" target="_blank" rel="noopener noreferrer" className="w-10 h-10 glass flex items-center justify-center hover:text-[#00f2ff] transition-all">
+                  <Facebook size={18} />
                 </a>
-                <a href="#" className="w-10 h-10 glass flex items-center justify-center hover:text-[#00f2ff] transition-all">
+                <a href="https://www.instagram.com/vvcetofficial/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 glass flex items-center justify-center hover:text-[#00f2ff] transition-all">
+                  <Instagram size={18} />
+                </a>
+                <a href="https://www.linkedin.com/company/vvcet-official" target="_blank" rel="noopener noreferrer" className="w-10 h-10 glass flex items-center justify-center hover:text-[#00f2ff] transition-all">
                   <Linkedin size={18} />
-                </a>
-                <a href="#" className="w-10 h-10 glass flex items-center justify-center hover:text-[#00f2ff] transition-all">
-                  <Github size={18} />
                 </a>
               </div>
             </div>
@@ -439,7 +464,13 @@ const App: React.FC = () => {
                 </li>
                 <li className="flex items-center gap-3">
                   <ExternalLink size={16} className="text-[#bc13fe]" />
-                  <span>axion@vvcet.ac.in</span>
+                  <span>vvcet.ac.in</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <MessageCircle size={16} className="text-[#25D366]" />
+                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-[#25D366] transition-colors">
+                    WhatsApp: +91 {WHATSAPP_NUMBER}
+                  </a>
                 </li>
               </ul>
             </div>
