@@ -16,7 +16,7 @@ const coordinators = [
   },
   {
     role: "Student Coordinator",
-    name: "Mr. M.R. Shriram",
+    name: "Mr. M.R. Shri ram",
     phone: "9080707934"
   },
   {
@@ -32,7 +32,23 @@ const coordinators = [
   {
     role: "Student Coordinator",
     name: "Mr. R. Sanjay",
-    phone: "8825680679"
+    phone: "8825680976"
+  },
+  {
+    role: "Student Coordinator",
+    name: "Ms. V.S. Sowmya"
+  },
+  {
+    role: "Student Coordinator",
+    name: "Ms. T. Kavinaya"
+  },
+  {
+    role: "Student Coordinator",
+    name: "Ms. A. Aanandha Selvi"
+  },
+  {
+    role: "Student Coordinator",
+    name: "Ms. S. Sanjuka"
   }
 ];
 
@@ -75,7 +91,15 @@ const CoordinatorsSection: React.FC = () => {
                     </div>
                     
                     <h3 className="text-2xl font-black text-white font-logo uppercase tracking-tighter leading-tight mb-2 group-hover:text-[#00f2ff] transition-colors">
-                      {coord.name.toUpperCase()}
+                      {coord.name.split(' ').map((part, i) => 
+                        part.match(/^(Mr|Mrs|Ms)\.?$/i) ? (
+                          <span key={i} className="font-sans normal-case text-[10px] tracking-normal opacity-50 mr-1 inline-block align-middle">
+                            {part}
+                          </span>
+                        ) : (
+                          <span key={i}>{part}{i < coord.name.split(' ').length - 1 ? ' ' : ''}</span>
+                        )
+                      )}
                     </h3>
                     
                     <div className="w-8 h-[2px] bg-[#00f2ff]/30 mb-8 group-hover:w-full transition-all duration-700"></div>
@@ -87,13 +111,19 @@ const CoordinatorsSection: React.FC = () => {
                       <span className="text-[#00f2ff] animate-pulse">Online</span>
                     </div>
                     
-                    <a 
-                      href={`tel:${coord.phone}`} 
-                      className="flex items-center justify-center gap-3 w-full py-4 bg-white/5 border border-white/5 hover:bg-white hover:text-[#0b0e14] transition-all duration-300 font-tech text-xs font-black tracking-[0.2em] uppercase"
-                    >
-                      <Phone size={14} />
-                      <span>{coord.phone}</span>
-                    </a>
+                    {coord.phone ? (
+                      <a 
+                        href={`tel:${coord.phone}`} 
+                        className="flex items-center justify-center gap-3 w-full py-4 bg-white/5 border border-white/5 hover:bg-white hover:text-[#0b0e14] transition-all duration-300 font-tech text-xs font-black tracking-[0.2em] uppercase"
+                      >
+                        <Phone size={14} />
+                        <span>{coord.phone}</span>
+                      </a>
+                    ) : (
+                      <div className="flex items-center justify-center gap-3 w-full py-4 bg-white/[0.02] border border-white/5 text-gray-600 font-tech text-[10px] tracking-[0.2em] uppercase">
+                        <span>-----------</span>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

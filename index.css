@@ -17,17 +17,17 @@
 
 @layer utilities {
   .text-glow-cyan {
-    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5), 0 0 20px rgba(0, 242, 255, 0.2);
+    text-shadow: 0 0 5px rgba(0, 242, 255, 0.3);
   }
   .text-glow-purple {
-    text-shadow: 0 0 10px rgba(188, 19, 254, 0.5), 0 0 20px rgba(188, 19, 254, 0.2);
+    text-shadow: 0 0 5px rgba(188, 19, 254, 0.3);
   }
   .axion-brand {
     @apply relative font-logo font-black uppercase;
     background: linear-gradient(to right, #00f2ff, #bc13fe);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 10px rgba(0, 242, 255, 0.5));
+    filter: drop-shadow(0 0 4px rgba(0, 242, 255, 0.3));
   }
   .axion-container {
     @apply flex items-center gap-2 border-l-[3px] border-[#00f2ff] pl-3 relative;

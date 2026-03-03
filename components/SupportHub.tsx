@@ -35,7 +35,7 @@ const SupportHub: React.FC<SupportHubProps> = ({ whatsappLink }) => {
                 <div>
                   <h4 className="text-white font-logo text-sm uppercase tracking-wider mb-2">Registration Fee?</h4>
                   <p className="text-gray-500 font-tech text-sm leading-relaxed">
-                    The standard fee is ₹250. This covers events, participation kits, and certifications.
+                    The standard fee is ₹250. This covers events, participation kits, Refreshments, Food and certifications.
                   </p>
                 </div>
                 
