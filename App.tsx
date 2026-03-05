@@ -76,7 +76,12 @@ const App: React.FC = () => {
       icon: <MessageSquare className="w-12 h-12 text-[#00f2ff]" />,
       accent: "#00f2ff",
       image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800",
-      showRegister: false
+      showRegister: false,
+      resourcePerson: {
+        name: "TBD",
+        role: "Expert Facilitator",
+        org: "Internal Faculty"
+      }
     },
     {
       day: "DAY 02",
@@ -86,7 +91,12 @@ const App: React.FC = () => {
       icon: <Layers className="w-12 h-12 text-[#bc13fe]" />,
       accent: "#bc13fe",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800",
-      showRegister: true
+      showRegister: true,
+      resourcePerson: {
+        name: "Mr. MOHANASUNDARAM",
+        role: "Technical Trainer",
+        org: "Avanshhan Chennai"
+      }
     },
     {
       day: "DAY 03",
@@ -96,12 +106,17 @@ const App: React.FC = () => {
       icon: <Bot className="w-12 h-12 text-[#00f2ff]" />,
       accent: "#00f2ff",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-      showRegister: true
+      showRegister: true,
+      resourcePerson: {
+        name: "TBD",
+        role: "Industry Expert",
+        org: "Tech Partner"
+      }
     }
   ];
 
   const sponsors = [
-    "VIDYAA VIKAS", "Rexora", "vazhi Aakkam", "reign mars", "DataStream", "Quantum Dev", "Aether Robotics", "LogicGate"
+    "VIDYAA VIKAS", "Rexora", "vazhi Aakkam", "reign mars", "AVANSHHAN", "Quantum Dev", "Aether Robotics", "LogicGate"
   ];
 
   return (
@@ -378,9 +393,15 @@ const App: React.FC = () => {
                         Registration Open <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                       </button>
                     )}
-                    <span className="text-[10px] text-white/30 uppercase tracking-[0.3em] font-logo">
-                      Expert Resource Person TBD
-                    </span>
+                    <div className="flex flex-col">
+                      <span className="text-[10px] text-white/30 uppercase tracking-[0.3em] font-logo mb-1">
+                        Resource Person
+                      </span>
+                      <div className="flex flex-col">
+                        <span className="text-sm font-bold text-white uppercase tracking-wider">{ws.resourcePerson.name}</span>
+                        <span className="text-[10px] text-gray-500 uppercase tracking-widest font-tech">{ws.resourcePerson.role} // {ws.resourcePerson.org}</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </motion.div>
