@@ -78,9 +78,9 @@ const App: React.FC = () => {
       image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800",
       showRegister: false,
       resourcePerson: {
-        name: "TBD",
-        role: "Expert Facilitator",
-        org: "Internal Faculty"
+        name: "Keerthana M",
+        role: "Soft Skills Trainer",
+        org: "LeSuccess, Coimbatore"
       }
     },
     {
@@ -116,7 +116,7 @@ const App: React.FC = () => {
   ];
 
   const sponsors = [
-    "VIDYAA VIKAS", "Rexora", "vazhi Aakkam", "reign mars", "AVANSHHAN", "Quantum Dev", "Aether Robotics", "LogicGate"
+    "VIDYAA VIKAS", "Rexora", "vazhi Aakkam", "reign mars", "AVANSHHAN", "LeSuccess"
   ];
 
   return (
