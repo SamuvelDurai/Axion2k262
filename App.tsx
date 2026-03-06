@@ -93,9 +93,9 @@ const App: React.FC = () => {
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800",
       showRegister: true,
       resourcePerson: {
-        name: "Mr. MOHANASUNDARAM",
-        role: "Technical Trainer",
-        org: "Avanshhan Chennai"
+        name: "Mohanasundaram M",
+        role: "Technical Trainer _ Expert in AI with IoT",
+        org: "AVANSHHAN, Chennai"
       }
     },
     {
@@ -108,9 +108,9 @@ const App: React.FC = () => {
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
       showRegister: true,
       resourcePerson: {
-        name: "TBD",
-        role: "Industry Expert",
-        org: "Tech Partner"
+        name: "Nandhakumar N",
+        role: "Digital Marketing Specialist",
+        org: "AVANSHHAN, Chennai"
       }
     }
   ];
