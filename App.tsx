@@ -34,7 +34,7 @@ const App: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const FORM_LINK = "https://forms.gle/3LYU8FG75LNRmmJg7";
+  const FORM_LINK = "https://forms.gle/crZ9S6i4hnwCS2dp8";
   const WHATSAPP_NUMBER = "8940312281";
   const WHATSAPP_LINK = `https://wa.me/91${WHATSAPP_NUMBER}?text=Hi, I'm interested in AXION 2K26 Workshop!`;
 

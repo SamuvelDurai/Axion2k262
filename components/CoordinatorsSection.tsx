@@ -44,7 +44,7 @@ const coordinators = [
   },
   {
     role: "Student Coordinator",
-    name: "Ms. A. Aanandha Selvi"
+    name: "Ms. A. Anandha Selvi"
   },
   {
     role: "Student Coordinator",
