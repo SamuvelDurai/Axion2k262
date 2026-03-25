@@ -70,7 +70,7 @@ const App: React.FC = () => {
   const workshops = [
     {
       day: "DAY 01",
-      topic: "Soft Skills & Communication",
+      topic: "Advanced Communication and Personality Development",
       audience: "1st Year Students (Internal Only)",
       description: "Elevating professional presence and articulation. Master the art of high-impact communication for the modern tech workplace. Focus on interview readiness, presentation skills, and corporate etiquette.",
       icon: <MessageSquare className="w-12 h-12 text-[#00f2ff]" />,
@@ -78,9 +78,9 @@ const App: React.FC = () => {
       image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800",
       showRegister: false,
       resourcePerson: {
-        name: "Keerthana M",
-        role: "Soft Skills Trainer",
-        org: "LeSuccess, Coimbatore"
+        name: "Rudreshwaran S ",
+        role: "Founder",
+        org: "The Beacon, Coimbatore"
       }
     },
     {
@@ -116,7 +116,7 @@ const App: React.FC = () => {
   ];
 
   const sponsors = [
-    "VIDYAA VIKAS", "Rexora", "vazhi Aakkam", "reign mars", "AVANSHHAN", "LeSuccess"
+    "VIDYAA VIKAS", "Rexora", "vazhi Aakkam", "reign mars", "AVANSHHAN", "The Beacon"
   ];
 
   return (
